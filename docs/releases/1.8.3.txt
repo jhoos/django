@@ -59,3 +59,21 @@ Bugfixes
   results (:ticket:`24924`).
 
 * Fixed usage of transforms in subqueries (:ticket:`24744`).
+
+* Fixed ``SimpleTestCase.assertRaisesMessage()`` on Python 2.7.10
+  (:ticket:`24903`).
+
+* Provided better backwards compatibility for the ``verbosity`` argument in
+  ``optparse`` management commands by casting it to an integer
+  (:ticket:`24769`).
+
+* Fixed ``prefetch_related()`` on databases other than PostgreSQL for models
+  using UUID primary keys (:ticket:`24912`).
+
+* Fixed removing ``unique_together`` constraints on MySQL (:ticket:`24972`).
+
+* Fixed crash when uploading images with MIME types that Pillow doesn't detect,
+  such as bitmap, in ``forms.ImageField`` (:ticket:`24948`).
+
+* Fixed a regression when deleting a model through the admin that has a
+  ``GenericRelation`` with a ``related_query_name`` (:ticket:`24940`).
